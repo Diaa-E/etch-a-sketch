@@ -1,6 +1,11 @@
 "use strict";
 
-const gridContainer = document.querySelector(".grid-container")
+const gridContainer = document.querySelector(".grid-container");
+
+const clearButton = document.querySelector('.clear');
+clearButton.addEventListener('click', () => {
+    clearGrid();
+})
 
 function createGrid(gridContainer, dimensions = 16)
 {
@@ -27,6 +32,12 @@ function addCellListeners(cells)
 function fillCell(cell)
 {
     cell.classList.add('cell-fill')
+}
+
+function clearGrid()
+{
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => cell.classList.remove('cell-fill'));
 }
 
 createGrid(gridContainer, 50);
