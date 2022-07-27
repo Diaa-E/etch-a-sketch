@@ -18,6 +18,10 @@ body{
 }
 
 .cell{
-    background-color: red;
+    background-color: antiquewhite;
+}
+
+.cell-fill{
+    background-color: darkslategrey;
 }
 
