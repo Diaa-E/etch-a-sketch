@@ -6,15 +6,23 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 50px;
+}
+
+h1{
+    margin-bottom: -80px;
+    z-index: 1; /*bring to front*/
 }
 
 .grid-container{
-    background-color: darkgray;
+    background-color: red;
     width: 960px;
     height: 500px;
     display: grid;
     gap: 1px; /*works better with smaller cells*/
     display: grid;
+    padding: 100px;
+    border-radius: 20px;
 }
 
 .cell{
