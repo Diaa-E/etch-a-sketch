@@ -2,4 +2,22 @@
 
 body{
     font-family:'Indie Flower', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.grid-container{
+    background-color: aqua;
+    width: 960px;
+    height: 500px;
+    display: grid;
+    gap: 1px; /*works better with smaller cells*/
+    display: grid;
+}
+
+.cell{
+    background-color: red;
+}
+
