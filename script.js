@@ -14,7 +14,7 @@ clearButton.addEventListener('click', () => {
 //create a new grid with a different size
 const newButton = document.querySelector('.new');
 newButton.addEventListener('click', () => {
-    createGrid(gridContainer, +prompt('Enter a new size.'));
+    createGrid(gridContainer, +prompt(`Enter a new size between ${LOWER_LIMIT} and ${UPPER_LIMIT} .`));
 });
 
 function destroyGrid(gridContainer)
