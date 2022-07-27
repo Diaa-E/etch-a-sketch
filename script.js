@@ -5,14 +5,16 @@ const LOWER_LIMIT = 16;
 
 const gridContainer = document.querySelector(".grid-container");
 
+//clear current grid
 const clearButton = document.querySelector('.clear');
 clearButton.addEventListener('click', () => {
     clearGrid();
 });
 
+//create a new grid with a different size
 const newButton = document.querySelector('.new');
 newButton.addEventListener('click', () => {
-    createGrid(gridContainer, +prompt('Enter a new size.'))
+    createGrid(gridContainer, +prompt('Enter a new size.'));
 });
 
 function destroyGrid(gridContainer)
@@ -47,7 +49,7 @@ function createGrid(gridContainer, dimensions = 16)
     destroyGrid(gridContainer);
 
     //change grid template based on new dimensions
-    gridContainer.setAttribute('style', `grid-template-columns: repeat(${dimensions}, 1fr)`);
+    setGridSize(gridContainer, dimensions);
 
     //create a new grid
     for (let i = 0; i < (dimensions ** 2); i++)
@@ -58,6 +60,11 @@ function createGrid(gridContainer, dimensions = 16)
     }
 
     addCellListeners(document.querySelectorAll('.cell'));
+}
+
+function setGridSize(gridContainer, dimensions)
+{
+    gridContainer.setAttribute('style', `grid-template-columns: repeat(${dimensions}, 1fr)`);
 }
 
 function addCellListeners(cells)
