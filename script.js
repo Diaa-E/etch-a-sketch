@@ -8,7 +8,12 @@ const gridContainer = document.querySelector(".grid-container");
 const clearButton = document.querySelector('.clear');
 clearButton.addEventListener('click', () => {
     clearGrid();
-})
+});
+
+const newButton = document.querySelector('.new');
+newButton.addEventListener('click', () => {
+    createGrid(gridContainer, +prompt('Enter a new size.'))
+});
 
 function destroyGrid(gridContainer)
 {
@@ -73,7 +78,4 @@ function clearGrid()
     cells.forEach(cell => cell.classList.remove('cell-fill'));
 }
 
-createGrid(gridContainer, 50);
-createGrid(gridContainer, 2);
-createGrid(gridContainer, 150);
-createGrid(gridContainer, 'alex');
+createGrid(gridContainer);
